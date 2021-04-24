@@ -7,8 +7,8 @@ const DataBaseHandler = require("../models/db");
 const handler = new DataBaseHandler();
 
 
-router.post("/crearUsuario", urlencodedParser, (req2, res2) => {
-  handler.getConnection().query("Call crearUsuario(\"" + req2.body.usuario + "\",\"" + req2.body.contrasena + "\"," + req2.body.tipoUsuario + ");", (err, res) => {
+router.post("/eliminarUsuario", urlencodedParser, (req2, res2) => {
+  handler.getConnection().query("Call eliminarUsuario(\"" + req2.body.usuario + "\");", (err, res) => {
     if (err) {
       res2.status(500).json({
         codigo: 500,
