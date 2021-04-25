@@ -1,0 +1,78 @@
+version: '3.7'
+
+services:
+  login:
+    build: ./login
+    ports:
+      - "3001:3001"
+    networks:
+      - backend-network
+  verpantallas:
+    build: ./verPantallas
+    ports:
+      - "3002:3002"
+    networks:
+      - backend-network
+  crearusuario:
+    build: ./crearUsuario
+    ports:
+      - "3003:3003"
+    networks:
+      - backend-network
+  eliminarusuario:
+    build: ./eliminarUsuario
+    ports:
+      - "3004:3004"
+    networks:
+      - backend-network
+  crearpermiso:
+    build: ./crearPermiso
+    ports:
+      - "3005:3005"
+    networks:
+      - backend-network
+  eliminarpermiso:
+    build: ./eliminarPermiso
+    ports:
+      - "3006:3006"
+    networks:
+      - backend-network
+  ingresarnorma:
+    build: ./ingresarNorma
+    ports:
+      - "3007:3007"
+    networks:
+      - backend-network
+  agregarcaracteristica:
+    build: ./agregarCaracteristica
+    ports:
+      - "3008:3008"
+    networks:
+      - backend-network
+  eliminarnorma:
+    build: ./eliminarNorma
+    ports:
+      - "3009:3009"
+    networks:
+      - backend-network
+  vernormas:
+    build: ./verNormas
+    ports:
+      - "3010:3010"   
+    networks:
+      - backend-network
+  verusuarios:
+    build: ./verUsuarios
+    ports:
+      - "3011:3011"              
+    networks:
+      - backend-network
+  generareporte:
+    build: ./generarReporte
+    ports:
+      - "3012:3012"              
+    networks:
+      - backend-network
+networks:
+  backend-network:
+    name: backend-network
