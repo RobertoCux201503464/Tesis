@@ -19,6 +19,7 @@ router.post("/login",urlencodedParser,(req2,res2)=>{
     }
 
     var cuenta=res[0][0];
+    
     if(cuenta==0){
       res2.json({
         codigo: 500,
@@ -29,7 +30,7 @@ router.post("/login",urlencodedParser,(req2,res2)=>{
       res2.json({
         codigo:200,
         Estado: true,
-        data: cuenta.resultado
+        data: res[0]
       });
 
     }
