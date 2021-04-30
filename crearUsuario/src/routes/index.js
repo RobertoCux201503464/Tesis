@@ -21,7 +21,7 @@ router.post("/crearUsuario", urlencodedParser, (req2, res2) => {
     res2.json({
       codigo: 200,
       Estado: true,
-      data: res[0][0]
+      data: res[0]
     });
 
   });
