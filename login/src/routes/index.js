@@ -24,7 +24,7 @@ router.post("/login",urlencodedParser,(req2,res2)=>{
       res2.json({
         codigo: 500,
         Estado: false,
-        data: 0
+        data: [{"resultado": 0}]
       });
     }else{
       res2.json({

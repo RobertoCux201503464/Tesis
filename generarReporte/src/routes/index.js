@@ -13,7 +13,7 @@ router.post("/generarReporte", urlencodedParser, (req2, res2) => {
       res2.status(500).json({
         codigo: 500,
         Estado: false,
-        data: 0
+        data: [{"resultado": 0}]
       });
       return;
     }

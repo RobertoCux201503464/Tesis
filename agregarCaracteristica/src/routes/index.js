@@ -9,11 +9,12 @@ const handler = new DataBaseHandler();
 
 router.post("/agregarCaracteristicaNorma", urlencodedParser, (req2, res2) => {
   handler.getConnection().query("Call agregarCaracteristicaNorma(\"" + req2.body.caracteristica + "\",\""+req2.body.descripcion+"\","+req2.body.numeroNorma+");", (err, res) => {
+
     if (err) {
       res2.status(500).json({
         codigo: 500,
         Estado: false,
-        data: 0
+        data: [{"resultado": 0}]
       });
       return;
     }
@@ -21,7 +22,7 @@ router.post("/agregarCaracteristicaNorma", urlencodedParser, (req2, res2) => {
     res2.json({
       codigo: 200,
       Estado: true,
-      data: res[0][0]
+      data: res[0]
     });
 
   });

@@ -13,7 +13,7 @@ router.post("/eliminarPermiso", urlencodedParser, (req2, res2) => {
       res2.status(500).json({
         codigo: 500,
         Estado: false,
-        data: 0
+        data: [{"resultado": 0}]
       });
       return;
     }
@@ -21,7 +21,7 @@ router.post("/eliminarPermiso", urlencodedParser, (req2, res2) => {
     res2.json({
       codigo: 200,
       Estado: true,
-      data: res[0][0]
+      data: res[0]
     });
 
   });
