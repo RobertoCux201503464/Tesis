@@ -8,7 +8,7 @@ const handler = new DataBaseHandler();
 
 
 router.post("/generarReporte", urlencodedParser, (req2, res2) => {
-  handler.getConnection().query("Call generarReporte(\""+req2.body.nombreNorma+"\");", (err, res) => {
+  handler.getConnection().query("Call generarReporte("+req2.body.numeroNorma+");", (err, res) => {
     if (err) {
       res2.status(500).json({
         codigo: 500,
