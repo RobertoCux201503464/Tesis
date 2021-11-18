@@ -73,37 +73,37 @@ services:
       - "3012:3012"              
     networks:
       - backend-network
-  generareporte:
+  asociarMaquina:
     build: ./asociarMaquina
     ports:
       - "3023:3023"              
     networks:
       - backend-network
-  generareporte:
+  borrarMaquina:
     build: ./borrarMaquina
     ports:
       - "3021:3021"              
     networks:
       - backend-network
-  generareporte:
+  eliminarAsociacion:
     build: ./eliminarAsociacion
     ports:
       - "3025:3025"              
     networks:
       - backend-network
-  generareporte:
+  existenciaMaquina:
     build: ./existenciaMaquina
     ports:
       - "3013:3013"              
     networks:
       - backend-network
-  generareporte:
+  verIdMaquinas:
     build: ./verIdMaquinas
     ports:
       - "3024:3024"              
     networks:
       - backend-network
-  generareporte:
+  verMaquinas:
     build: ./verMaquinas
     ports:
       - "3026:3026"              
